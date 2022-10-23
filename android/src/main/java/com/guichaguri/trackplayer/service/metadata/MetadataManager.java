@@ -81,7 +81,7 @@ public class MetadataManager {
         openApp.setAction(Intent.ACTION_VIEW);
         openApp.setData(Uri.parse("trackplayer://notification.click"));
 
-        builder.setContentIntent(PendingIntent.getActivity(context, 0, openApp, PendingIntent.FLAG_CANCEL_CURRENT));
+        builder.setContentIntent(PendingIntent.getActivity(context, 0, openApp, PendingIntent.FLAG_IMMUTABLE));
 
         builder.setSmallIcon(R.drawable.play);
         builder.setCategory(NotificationCompat.CATEGORY_TRANSPORT);
